@@ -27,8 +27,14 @@
 import { Sequelize } from "sequelize";
 import mysql from "mysql2";
 
-export const sequelize = new Sequelize("TAPAT", "root", "", {
-  host: "localhost",
-  dialect: "mysql",
-  dialectModule: mysql
-});
+export const sequelize = new Sequelize(
+  process.env.MYSQLDATABASE,
+  process.env.MYSQLUSER,
+  process.env.MYSQLPASSWORD,
+  {
+    host: process.env.MYSQLHOST,
+    port: process.env.MYSQLPORT,
+    dialect: "mysql",
+    dialectModule: mysql
+  }
+);
