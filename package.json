@@ -4,7 +4,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
     "xian-start": "node index.js",
     "xian": "nodemon index.js",
     "migrate": "node migrate.js",
@@ -18,7 +17,7 @@
     "express-session": "^1.17.3",
     "hbs": "^4.2.0",
     "inquirer": "^9.2.15",
-    "mysql2": "^3.9.2",
+    "mysql2": "^3.23.2",
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
