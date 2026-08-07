@@ -67,6 +67,10 @@ export const Resident = sequelize.define("Resident", {
     type: DataTypes.STRING,
     defaultValue: "active",
   }
+}, {
+  tableName: "residents",
+  freezeTableName: true
 });
 
-export { sequelize } ;
+
+export { sequelize };
