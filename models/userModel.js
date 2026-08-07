@@ -24,18 +24,21 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
     */
-import { DataTypes } from "sequelize";
-import { sequelize } from "./db.js";
+  import { DataTypes } from "sequelize";
+  import { sequelize } from "./db.js";
 
-export const User = sequelize.define("User", {
-  fullname: { type: DataTypes.STRING, allowNull: false },
-  email: { type: DataTypes.STRING, allowNull: false, unique: true },
-  password: { type: DataTypes.STRING, allowNull: false },
-  role: {
-    type: DataTypes.ENUM("admin", "secretary", "bhw", "resident"),
-    defaultValue: "resident"
-  },
-  bhwId: { type: DataTypes.INTEGER, allowNull: true }
+  export const User = sequelize.define("User", {
+    fullname: { type: DataTypes.STRING, allowNull: false },
+    email: { type: DataTypes.STRING, allowNull: false, unique: true },
+    password: { type: DataTypes.STRING, allowNull: false },
+    role: {
+        type: DataTypes.ENUM("admin", "secretary", "bhw", "resident"),
+        defaultValue: "resident"
+    },
+    bhwId: { type: DataTypes.INTEGER, allowNull: true }
+}, {
+    tableName: "users",
+    freezeTableName: true
 });
 
 export { sequelize };
