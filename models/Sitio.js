@@ -53,7 +53,8 @@ export const Sitio = sequelize.define('Sitio', {
         }
     }
 }, {
-    tableName: 'Sitios',
+    tableName: 'sitios',
+    freezeTableName: true,
     timestamps: true
 });
 
